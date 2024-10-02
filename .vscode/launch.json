@@ -10,7 +10,8 @@
       "request": "launch",
       "console": "integratedTerminal",
       "mode": "auto",
-      "program": "${workspaceFolder}/cmd/dashboard"
+      "program": "${workspaceFolder}/cmd/dashboard",
+      "buildFlags": ["-tags", "noassets"]
     }
   ]
 }
