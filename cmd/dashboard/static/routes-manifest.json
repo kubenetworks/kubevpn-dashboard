@@ -1,0 +1,49 @@
+{
+  "routeAssets": {
+    "main": {
+      "chunkIds": [
+        "8242",
+        "8019",
+        "3361",
+        "2126",
+        "2118",
+        "6940",
+        "6909"
+      ],
+      "assets": [
+        "/static/css/lib-arco.e2f00a95.css",
+        "/static/js/lib-arco.87df9a4a.js",
+        "/static/js/lib-react.eb5c189f.js",
+        "/static/js/lib-polyfill.bd8d9fd1.js",
+        "/static/js/lib-router.7c817442.js",
+        "/static/js/6940.d5efaacc.js",
+        "/static/css/main.e060cf16.css",
+        "/static/js/main.b9f40bff.js"
+      ],
+      "referenceCssAssets": [
+        "/static/css/lib-arco.e2f00a95.css",
+        "/static/css/main.e060cf16.css"
+      ]
+    },
+    "page": {
+      "chunkIds": [
+        "8019",
+        "2072",
+        "1541",
+        "7484"
+      ],
+      "assets": [
+        "/static/css/lib-arco.e2f00a95.css",
+        "/static/js/lib-arco.87df9a4a.js",
+        "/static/js/async/lib-axios.bf3774e7.js",
+        "/static/js/async/1541.5bc5c1e6.js",
+        "/static/css/async/1541.e16a90b5.css",
+        "/static/js/async/page.e9a86aee.js"
+      ],
+      "referenceCssAssets": [
+        "/static/css/lib-arco.e2f00a95.css",
+        "/static/css/async/1541.e16a90b5.css"
+      ]
+    }
+  }
+}

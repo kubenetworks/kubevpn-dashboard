@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkubevpn_dashboard_web=self.webpackChunkkubevpn_dashboard_web||[]).push([["4413"],{70868:function(e,b,s){s.r(b)}}]);
