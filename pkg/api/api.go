@@ -17,5 +17,7 @@ func GetFuncName(i any) string {
 }
 
 var API = map[string]any{
-	GetFuncName(GetVersion): GetVersion,
+	GetFuncName(GetVersion):          GetVersion,
+	GetFuncName(GetKubevpnConfig):    GetKubevpnConfig,
+	GetFuncName(UpdateKubevpnConfig): UpdateKubevpnConfig,
 }

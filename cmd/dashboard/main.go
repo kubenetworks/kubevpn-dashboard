@@ -53,9 +53,16 @@ func main() {
 
 	// api
 	http.HandleFunc("/api/dashboard", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != "POST" {
+			msg := fmt.Sprintf("only http method of POST is accepted: %s $s", r.Method, r.URL.String())
+			log.Println(msg)
+			http.Error(w, msg, http.StatusBadRequest)
+			return
+		}
+
 		queryMap, err := url.ParseQuery(r.URL.RawQuery)
 		if err != nil {
-			msg := fmt.Sprintf("failed to parse query: %s: %s", r.URL, err)
+			msg := fmt.Sprintf("failed to parse query: %s: %s", r.URL.Path, err)
 			log.Println(msg)
 			http.Error(w, msg, http.StatusBadRequest)
 			return
@@ -63,7 +70,7 @@ func main() {
 
 		actionName := queryMap.Get("Action")
 		if actionName == "" {
-			msg := fmt.Sprintf(`a query param of "Action" required: %s`, r.URL)
+			msg := fmt.Sprintf(`a query param of "Action" required: %s`, r.URL.Path)
 			log.Println(msg)
 			http.Error(w, msg, http.StatusBadRequest)
 			return
@@ -71,7 +78,7 @@ func main() {
 
 		f, ok := api.API[actionName]
 		if !ok {
-			msg := fmt.Sprintf("not implemented: %s", r.URL)
+			msg := fmt.Sprintf("not implemented: %s", r.URL.Path)
 			log.Println(msg)
 			http.Error(w, msg, http.StatusNotImplemented)
 			return
